@@ -1,0 +1,38 @@
+# 3-state HMM
+#
+#       0.9        *        0.8
+# 1.0   /\  0.1   /\  1.0   /\  0.2
+# ---> (S1) ---> (S2) ---> (S3) --->
+#
+# state format is name, init, term, transitions, order, durations
+# state S2 has an explicit duration for 10 nt
+# emission profiles:
+#
+# S1 (GC-rich): 0.1 0.4 0.4 0.1
+# S2 (AT-rich): 0.4 0.1 0.1 0.4
+# S3 (GC-rich): 0.1 0.4 0.4 0.1
+#
+
+denada-HMM 3-state-example 3
+
+denada-State S1 1.0 0.0 2 0 0
+
+	S1 0.9
+	S2 0.1
+	
+	0.1 0.4 0.4 0.1
+
+denada-State S2 0.0 0.0 1 0 10
+
+	S3 1.0
+	
+	0.4 0.1 0.1 0.4
+	
+	0.0 0.0 0.0 0.0 0.1
+	0.1 0.2 0.3 0.2 0.1
+
+denada-State S3 0.0 0.2 1 0 0
+
+	S3 0.8
+	
+	0.1 0.4 0.4 0.1

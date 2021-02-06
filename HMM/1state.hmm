@@ -1,0 +1,8 @@
+denada-HMM 1-state-example 1
+
+denada-State S1 1.0 1.0 1 0 0
+
+	S1 1.0
+	
+	0.1 0.7 0.1 0.1
+

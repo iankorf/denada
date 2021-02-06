@@ -1,0 +1,3 @@
+denada.o: denada.c denada.h ik/toolbox.h ik/sequence.h
+sequence.o: ik/sequence.c ik/sequence.h ik/toolbox.h
+toolbox.o: ik/toolbox.c ik/toolbox.h
